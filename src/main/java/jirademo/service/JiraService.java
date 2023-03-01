@@ -52,6 +52,11 @@ public class JiraService {
         ObjectNode payload = jnf.objectNode();
         ObjectNode fields = payload.putObject("fields");
         fields.put("summary", jiraRequest.getSummary());
+         //fields.put("startdate",jiraRequest.getStartdate());
+        fields.put("duedate",jiraRequest.getDuedate());
+        ObjectNode assignee = fields.putObject("assignee");
+
+            assignee.put("id", jiraRequest.getAssigneeId());
 
         ObjectNode description = fields.putObject("description");
         description.put("type", "doc");

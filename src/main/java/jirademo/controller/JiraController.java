@@ -17,7 +17,7 @@ public class JiraController {
     }
     @PostMapping("/create")
     public ResponseEntity<Response> create(@RequestBody JiraRequest jiraRequest) throws UnirestException {
-         return new ResponseEntity<Response>((Response) jiraService.create(jiraRequest),HttpStatus.CREATED);
+         return new ResponseEntity(jiraService.create(jiraRequest),HttpStatus.CREATED);
     }
 
     @GetMapping("/get")

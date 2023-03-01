@@ -16,6 +16,6 @@ public class JiraRequest {
     private String projectKey;
     private String prioriy;
     private String description;
-    private String start_date;
-    private String due_date;
+    private String startdate;
+    private String duedate;
 }
